@@ -1,9 +1,9 @@
-.header {
-    &__main {
+.header {    
         background-image: url(../img/Header_bg.png);
-        background-position: top;
-        background-size: cover;        
-    }
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;       
+    
     &__mainLogo {
         color: white;
         font-family: 'Josefin Sans', sans-serif;
@@ -28,9 +28,7 @@
         margin-top: 24px;
         width: 650px;// delete
     }
-    &__form {
-        width: 500px;//delete
-    }    
+        
     &__name {
         width: 500px;//delete
         height: 60px;//delete
@@ -38,17 +36,17 @@
         border: 0;
         text-align: start;
         padding-left: 2vw;
-    }    
-    &__btn {
-        position: relative;
-    }
-    &__name::placeholder {
-        text-align: center;
+    }       
+    &__name::placeholder {        
         color: #999;
         font-family: 'Josefin Sans', sans-serif;
         font-size: 14px;
         font-weight: 400;
-        letter-spacing: 2px;
+        letter-spacing: 1.8px;
+        padding-left: 87px;
+    }
+    &__btn {
+        position: relative;
     }
     &__btn:hover .search{
         background-color: #2484ad;
@@ -60,10 +58,7 @@
     &__btn:active .search{
         filter: invert(1);
     }    
-    &__scroll {
-    text-align: center;
-    }
-    &__btn ~ input {
+    &__btn input {
         width: 150px; //delete
         height: 60px; //delete
         background-color: #5474fd;
@@ -73,28 +68,29 @@
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-    &__btn ~ svg {
+        text-transform: uppercase;        
+    }    
+    &__btn svg {
         position: absolute;
         top: 19px;
-        left: 112px;
-        fill: #fff;
-        fill-rule: evenodd;
+        left: 112px;        
         pointer-events: none;
     }
-    &__scroll ~ p {
+    &__scroll {
+        text-align: center;
+        margin-top: 120px;
+        }
+    &__scroll p {
         color: white;
         font-family: 'Josefin Sans', sans-serif;
         font-size: 14px;
         font-weight: 300;
-        letter-spacing: 2px;
-        margin-top: 120px;
-        margin-bottom: 7px;    
+        letter-spacing: 2px;        
+        margin-bottom: 6px;    
         position: relative;
         cursor: pointer;
     } 
-    &__scroll ~ p::after {
+    &__scroll p::after {
         content: url(../img/point.svg);
         position: absolute;
         opacity: 0.8;
@@ -104,18 +100,13 @@
         height: 7px; //delete    
         visibility: hidden;
     }
-    &__scroll ~ p:hover::after {
+    &__scroll p:hover::after {
         visibility: visible;
         transition-delay: 300ms;    
-    }
-    &__scroll ~ svg {
-    
-        fill: #fff;
-        fill-rule: evenodd;
-    }
+    }    
     &__footer {
-        background-color: #5474fd;
-        height: 80px; //delete
+        margin-top: 132px;
+        background-color: #5474fd;        
     } 
     &__footerLogo {
         color: white;
@@ -125,7 +116,8 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         text-decoration: none;
-        cursor: pointer;    
+        cursor: pointer;
+        margin-left: -3px;    
     }
     &__menu {
         width: 100%; //delete
