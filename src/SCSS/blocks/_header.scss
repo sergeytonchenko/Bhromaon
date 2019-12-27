@@ -1,14 +1,10 @@
 .header {
-    height: 820px;
-}
-
-.headmain {
-    background-image: url(../img/Header_bg.png);
-    background-position: top;
-    background-size: cover;
-    height: 740px;
-
-    &__logo {
+    &__main {
+        background-image: url(../img/Header_bg.png);
+        background-position: top;
+        background-size: cover;        
+    }
+    &__mainLogo {
         color: white;
         font-family: 'Josefin Sans', sans-serif;
         font-size: 48px;
@@ -17,7 +13,6 @@
         margin-top: 267px;
         letter-spacing: 3px;
     }
-    
     &__title {
         color: white;
         font-family: 'Josefin Sans', sans-serif;
@@ -26,32 +21,27 @@
         margin-top: 7px;
         letter-spacing: 6px;
     }
-    
     &__search {
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin-top: 24px;
-        width: 650px;
+        width: 650px;// delete
     }
-    
     &__form {
-        width: 500px;
-    }
-    
+        width: 500px;//delete
+    }    
     &__name {
-        width: 500px;
-        height: 60px;
+        width: 500px;//delete
+        height: 60px;//delete
         background-color: white;
         border: 0;
         text-align: start;
         padding-left: 2vw;
-    }
-    
+    }    
     &__btn {
         position: relative;
     }
-    
     &__name::placeholder {
         text-align: center;
         color: #999;
@@ -60,7 +50,6 @@
         font-weight: 400;
         letter-spacing: 2px;
     }
-
     &__btn:hover .search{
         background-color: #2484ad;
         border: 2px solid #0c2e26;
@@ -73,76 +62,62 @@
     }    
     &__scroll {
     text-align: center;
-}
-}
-
-
-
-.search {
-    width: 150px;
-    height: 60px;
-    background-color: #5474fd;
-    border: 2px solid white;
-    color: white;
-    font-family: 'Aleo', serif;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.search__magnifier {
-    position: absolute;
-    top: 19px;
-    left: 112px;
-    fill: #fff;
-    fill-rule: evenodd;
-    pointer-events: none;
-}
-
-.scroll {
+    }
+    &__btn ~ input {
+        width: 150px; //delete
+        height: 60px; //delete
+        background-color: #5474fd;
+        border: 2px solid white;
+        color: white;
+        font-family: 'Aleo', serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &__btn ~ svg {
+        position: absolute;
+        top: 19px;
+        left: 112px;
+        fill: #fff;
+        fill-rule: evenodd;
+        pointer-events: none;
+    }
+    &__scroll ~ p {
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin-top: 120px;
+        margin-bottom: 7px;    
+        position: relative;
+        cursor: pointer;
+    } 
+    &__scroll ~ p::after {
+        content: url(../img/point.svg);
+        position: absolute;
+        opacity: 0.8;
+        top: 35px;
+        left: 39.5px;
+        width: 10px; //delete
+        height: 7px; //delete    
+        visibility: hidden;
+    }
+    &__scroll ~ p:hover::after {
+        visibility: visible;
+        transition-delay: 300ms;    
+    }
+    &__scroll ~ svg {
     
-    &_text {
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-top: 120px;
-    margin-bottom: 7px;
-}
-&_text {
-    position: relative;
-    cursor: pointer;
-}
-&_check {
-    
-    fill: #fff;
-    fill-rule: evenodd;
-}
-&_text::after {
-    content: url(../img/point.svg);
-    position: absolute;
-    opacity: 0.8;
-    top: 35px;
-    left: 39.5px;
-    width: 10px;
-    height: 7px;    
-    visibility: hidden;
-}
-&_text:hover::after {
-    visibility: visible;
-    transition-delay: 300ms;    
-}
-
-}
-
-
-.headfoot {
-    background-color: #5474fd;
-    height: 80px;  
-    
-    &__logo {
+        fill: #fff;
+        fill-rule: evenodd;
+    }
+    &__footer {
+        background-color: #5474fd;
+        height: 80px; //delete
+    } 
+    &__footerLogo {
         color: white;
         font-family: 'Josefin Sans', sans-serif;
         font-size: 24px;
@@ -150,17 +125,13 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         text-decoration: none;
-        cursor: pointer;
-    
+        cursor: pointer;    
     }
-    
     &__menu {
-        width: 100%;
-        height: 80px;
+        width: 100%; //delete
+        height: 80px; //delete
         padding-left: 14px;
     }
-    
-    
     &__link {
         color: white;
         font-family: 'Aleo', serif;
@@ -170,8 +141,6 @@
         text-decoration: none;
         cursor: pointer;
     }
-    
-    
     &__link:hover,
     &__logo:hover {
         text-shadow: 2px 5px 3px black;
@@ -183,6 +152,17 @@
         font-weight: 700;
     }
 }
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+
 
 
 
