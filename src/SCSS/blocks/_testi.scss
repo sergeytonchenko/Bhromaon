@@ -1,6 +1,5 @@
 .testi {
-    background-image: url(../img/Testimonial_bg.png);
-    height: 731px;
+    background-image: url(../img/Testimonial_bg.png);    
     background-position: top;
     background-size: cover;
 
@@ -9,17 +8,17 @@
         font-family: 'Aleo', serif;
         font-size: 36px;
         font-weight: 400;
-        margin-top: 117px;
-        margin-bottom: 94px;
+        margin-top: 116px;
+        margin-bottom: 93px;
     }
     &__article {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        background-color: #333333;
-        height: 100%;
+        background-color: #333333;        
         line-height: 28px;
         margin-left: -30px;
+        margin-bottom: 200px;
     }
     &__artTitle {
         color: #fefefe;
@@ -28,7 +27,7 @@
         font-weight: 300;
         text-transform: uppercase;
         padding-top: 46px;
-        padding-left: 57px;
+        padding-left: 57px;        
     }    
     &__text {
         position: relative;
@@ -38,9 +37,10 @@
         font-size: 16px;
         letter-spacing: -0.4px;
         line-height: 26px;
-        padding-top: 38px;
-        padding-left: 55px;
-        padding-right: 50px;
+        padding: 38px 50px 42px 55px;
+        // padding-top: 38px;
+        // padding-left: 55px;
+        // padding-right: 50px;
     }    
     &__quotes {
         position: absolute;
@@ -48,6 +48,16 @@
         left: 60px;
         color: #5474fd;
         font-size: 19px;
+    }
+    &__img {
+        width: 100%;
+
+        @media screen and (min-resolution: 2dppx) {            
+            content: url(../../../img/testi_img@x2.jpg);
+        }    
+        @media screen and (min-resolution: 3dppx) {            
+            content: url(../../../img/testi_img@x3.jpg);
+        }
     }
 }
 

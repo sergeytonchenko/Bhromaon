@@ -18,7 +18,7 @@
             text-align: justify;
             align-items: center;          
         }
-        @media (max-width: 719px) {
+        @media (max-width: 767px) {
             padding-top: 40px; 
                      
         }
@@ -42,6 +42,11 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 26px;
+
+        @media (max-width: 991px) {
+            font-size: 20px;
+            text-align: justify;           
+        }
     }
     &__text1 {
         margin-bottom: 27px;
@@ -53,7 +58,7 @@
         padding-top: 120px;
         padding-bottom: 117px;
 
-        @media (max-width: 1139px) {
+        @media (max-width: 1199px) {
             padding-top: 114px;
             padding-bottom: 111px;           
         }        
@@ -65,7 +70,7 @@
             text-align: justify;
             align-items: center;          
         }
-        @media (max-width: 719px) {
+        @media (max-width: 767px) {
             padding: 30px 0 30px 0;                    
         }        
     }    
@@ -77,10 +82,10 @@
             padding-left: 0;            
             padding-bottom: 15px;            
         }
-        @media (max-width: 719px) {
+        @media (max-width: 767px) {
             padding-right: 100px;                   
         }
-        @media (max-width: 539px) {
+        @media (max-width: 575px) {
             width: 100%;
             padding-right: 0;       
         } 
@@ -88,22 +93,22 @@
     &__img2 {
         padding-left: 188px;
 
-        @media (max-width: 1139px) {
+        @media (max-width: 1199px) {
             padding-left: 62px;            
         }
         @media (max-width: 991px) {
             padding-left: 0;       
         }
-        @media (max-width: 719px) {
+        @media (max-width: 767px) {
             padding-left: 100px;                   
         }
-        @media (max-width: 539px) {
+        @media (max-width: 575px) {
             width: 100%;
             padding-left: 0;       
         } 
     }
     &__btn {
-        @media (max-width: 539px) {
+        @media (max-width: 575px) {
             width: 100%;       
         }          
     }    
@@ -119,7 +124,7 @@
         background: url(../img/btn.png);
         transition: background 1s, text-shadow 1s, transform 1s;
          
-        @media (max-width: 539px) {
+        @media (max-width: 575px) {
             width: 100%;       
         }      
     }
