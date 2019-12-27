@@ -9,7 +9,7 @@
         font-size: 36px;
         font-weight: 400;
         margin-top: 116px;
-        margin-bottom: 93px;
+        margin-bottom: 93px;               
     }
     &__article {
         display: flex;
@@ -26,8 +26,9 @@
         font-size: 20px;
         font-weight: 300;
         text-transform: uppercase;
+        letter-spacing: -0.3px;
         padding-top: 46px;
-        padding-left: 57px;        
+        padding-left: 60px;        
     }    
     &__text {
         position: relative;
@@ -35,17 +36,14 @@
         font-family: 'Josefin Sans', sans-serif;
         font-weight: 100;
         font-size: 16px;
-        letter-spacing: -0.4px;
+        letter-spacing: -0.3px;
         line-height: 26px;
-        padding: 38px 50px 42px 55px;
-        // padding-top: 38px;
-        // padding-left: 55px;
-        // padding-right: 50px;
+        padding: 38px 50px 42px 62px;        
     }    
     &__quotes {
         position: absolute;
         top: 24px;
-        left: 60px;
+        left: 62px;
         color: #5474fd;
         font-size: 19px;
     }
