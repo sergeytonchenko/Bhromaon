@@ -25,11 +25,7 @@
             transform: scale(0.7);
         }
     }
-    &__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;        
+    &__content {               
         text-align: center;
         margin-left: -17px;
         margin-right: -20px;
@@ -53,8 +49,7 @@
         @media (max-width: 991px) {
             top: -190px;
             left: 109px;
-        }
-        
+        }      
         
     }
     &__arc2 {
