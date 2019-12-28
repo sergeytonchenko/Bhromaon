@@ -134,11 +134,11 @@
         cursor: pointer;
     }
     &__link:hover,
-    &__logo:hover {
+    &__footerLogo:hover {
         text-shadow: 2px 5px 3px black;
     }
     &__link:active,
-    &__logo:active {
+    &__footerLogo:active {
         text-shadow: none;
         color: #060629;
         font-weight: 700;
