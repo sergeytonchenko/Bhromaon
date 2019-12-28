@@ -219,122 +219,128 @@
     &__burger nav {
         width: 100%;
     }
-    &__burger.burger {
-
-        .burger__toggle {
-            display: flex;    
-            flex-direction: column;
-            align-items: flex-end;
-            position: relative;    
-            z-index: 1;
-            -webkit-user-select: none;
-            user-select: none;
-        
-            & input  {
-            display: flex;
-            width: 42px;
-            height: 42px;
-            position: absolute;
-            top: -16px;
-            right: 2px;
-            cursor: pointer;
-            opacity: 0;
-            z-index: 2;
-        }
-        
-          & span  {
-            display: flex;
-            width: 41px;
-            height: 3px;
-            margin-bottom: 8px;
-            position: relative;    
-            background: white;
-            border-radius: 3px;
-            z-index: 1;
-            transform-origin: 5px 0px;
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                        opacity 0.55s ease;
-        }
-          
-          & span:first-child  {
-            transform-origin: 0% 0%;
-        }
-          
-          & span:nth-last-child(2)  {
-            transform-origin: 0% 100%;
-        }
-          
-          & input:checked ~ span  {
-            opacity: 1;
-            transform: rotate(45deg) translate(-3px, -1px);
-            background: white;
-        }
-        
-          & input:checked ~ span:nth-last-child(3)  {
-            opacity: 0;
-            transform: rotate(0deg) scale(0.2, 0.2);
-        }
-          
-          & input:checked ~ span:nth-last-child(2)  {
-            transform: rotate(-45deg) translate(0, -1px);
-        }
-        
-          & input:checked ~ ul
-            {
-                opacity: .8;    
-            }
-        }
-        
-        .burger__link {
-            position: absolute;
-            width: 100%;
-            height: 150px;
-            padding-top: 5px;
-            padding-bottom: 0;
-            box-shadow: 0 0 10px #85888C;
-            top: -180px;        
-            opacity: 0;
-            background-color: #F5F6FA;
-            transition: all 0.5s linear;
-            text-align: center;
-        
-            & li {
-                padding: 15px;
-        
-                @media (max-width: 768px) {
-                    padding: 10px;
-                    }
-            }   
-        }
-
-        .burger__item {
-            & a {
-                color: #262626;
-                font-family: 'Raleway', sans-serif;
-                font-size: 16px;
-                font-weight: 700;
-                text-transform: uppercase;
-                text-decoration: none;
+    &__burger {
+        .burger {
+            &__toggle {
+                display: flex;    
+                flex-direction: column;
+                align-items: flex-end;
+                position: relative;    
+                z-index: 1;
+                -webkit-user-select: none;
+                user-select: none;
+            
+                & input  {
+                display: flex;
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                top: -16px;
+                right: 2px;
                 cursor: pointer;
+                opacity: 0;
+                z-index: 2;
             }
-        
-            &:hover {
-                background-color: #5474fd;
-                cursor: pointer;
+            
+              & span  {
+                display: flex;
+                width: 41px;
+                height: 3px;
+                margin-bottom: 8px;
+                position: relative;    
+                background: white;
+                border-radius: 3px;
+                z-index: 1;
+                transform-origin: 5px 0px;
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            opacity 0.55s ease;
             }
-            &:active {
+              
+              & span:first-child  {
+                transform-origin: 0% 0%;
+            }
+              
+              & span:nth-last-child(2)  {
+                transform-origin: 0% 100%;
+            }
+              
+              & input:checked ~ span  {
                 opacity: 1;
-                background-color: #330f75;        
+                transform: rotate(45deg) translate(-3px, -1px);
+                background: white;
             }
-        
-            &:active a {
-                opacity: 1;
-                color: white;        
-            }  
+            
+              & input:checked ~ span:nth-last-child(3)  {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+              
+              & input:checked ~ span:nth-last-child(2)  {
+                transform: rotate(-45deg) translate(0, -1px);
+            }
+            
+              & input:checked ~ ul
+                {
+                    opacity: .8;    
+                }
+            }
+            
+            &__link {
+                position: absolute;
+                width: 100%;
+                height: 150px;
+                padding-top: 5px;
+                padding-bottom: 0;
+                box-shadow: 0 0 10px #85888C;
+                top: -180px;        
+                opacity: 0;
+                background-color: #F5F6FA;
+                transition: all 0.5s linear;
+                text-align: center;
+            
+                & li {
+                    padding: 15px;
+            
+                    @media (max-width: 768px) {
+                        padding: 10px;
+                        }
+                }   
+            }
+    
+            &__item {
+                & a {
+                    color: #262626;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            
+                &:hover {
+                    background-color: #5474fd;
+                    cursor: pointer;
+                }
+                &:active {
+                    opacity: 1;
+                    background-color: #330f75;        
+                }
+            
+                &:active a {
+                    opacity: 1;
+                    color: white;        
+                }  
+            }
+        }
+
         }
     }
-}        
+    
+
+        
+       
 
         
 
