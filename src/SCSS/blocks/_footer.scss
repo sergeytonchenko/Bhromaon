@@ -4,16 +4,19 @@
     &__block {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        height: 268px;
+        align-items: center;        
         margin-left: -2px;
         margin-right: -2px;
     }
     &__link {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: space-between;        
+        margin-bottom: 52px;
+
+        @media (max-width: 1199px) {
+            margin-bottom: 40px;
+        }
     }    
     &__title {
         color: white;
@@ -24,6 +27,10 @@
         line-height: 44px;
         letter-spacing: 2.5px;
         margin-top: 111px;
+
+        @media (max-width: 1199px) {
+            margin-top: 40px;
+        }
     }    
     &__subtitle {
         color: white;
@@ -39,6 +46,14 @@
         text-decoration: none;
         font-size: 16px;
         color: white;
+        padding-right: 23px;
+
+        @media (max-width: 1199px) {
+            padding-right: 15px;
+        }
+    }
+    &__pinterest {
+        padding-right: 0;
     }    
     &__facebook:hover, &__twitter:hover,
     &__linkedin:hover, &__youtube:hover,
