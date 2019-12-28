@@ -12,6 +12,13 @@
         text-transform: uppercase;
         margin-top: 267px;
         letter-spacing: 3px;
+
+        @media (max-width: 991px) {
+            margin-top: 200px;
+        }
+        @media (max-width: 575px) {
+            font-size: 45px;
+        }
     }
     &__title {
         color: white;
@@ -20,6 +27,10 @@
         font-weight: 300;
         margin-top: 7px;
         letter-spacing: 6px;
+
+        @media (max-width: 575px) {
+            text-align: center;
+        }
     }
     &__search {
         display: flex;
@@ -27,15 +38,29 @@
         justify-content: center;
         margin-top: 24px;
         width: 650px;// delete
-    }
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 0; 
+        }
         
+    }        
     &__name {
-        width: 500px;//delete
-        height: 60px;//delete
+        width: 500px;
+        height: 60px;
         background-color: white;
         border: 0;
         text-align: start;
         padding-left: 2vw;
+
+        @media (max-width: 575px) {
+            width: 300px;
+            height: 60px; 
+            font-size: 22px;
+        }
     }       
     &__name::placeholder {        
         color: #999;
@@ -44,9 +69,18 @@
         font-weight: 400;
         letter-spacing: 1.8px;
         padding-left: 87px;
+
+        @media (max-width: 575px) {
+            padding-left: 5px;
+            font-size: 16px;
+        }
     }
     &__btn {
         position: relative;
+
+        @media (max-width: 767px) {
+            margin-top: 20px;
+        }
     }
     &__btn:hover .search{
         background-color: #2484ad;
@@ -57,10 +91,16 @@
     }
     &__btn:active .search{
         filter: invert(1);
-    }    
-    &__btn input {
-        width: 150px; //delete
-        height: 60px; //delete
+    }
+    &__btn input[value="Search"] {
+        padding: 22px 55px 17px 30px;
+
+        @media (max-width: 767px) {
+            padding: 23px 93px 20px 70px;
+        }
+        
+    }
+    &__btn input {        
         background-color: #5474fd;
         border: 2px solid white;
         color: white;
@@ -68,18 +108,27 @@
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 1px;
-        text-transform: uppercase;        
+        text-transform: uppercase; 
+        
     }    
     &__btn svg {
         position: absolute;
-        top: 19px;
-        left: 112px;        
+        top: 21px;
+        left: 110px;        
         pointer-events: none;
+
+        @media (max-width: 767px) {
+            left: 147px;
+        }
     }
     &__scroll {
         text-align: center;
         margin-top: 120px;
+
+        @media (max-width: 991px) {
+            margin-top: 90px;
         }
+    }
     &__scroll p {
         color: white;
         font-family: 'Josefin Sans', sans-serif;
@@ -106,7 +155,14 @@
     }    
     &__footer {
         margin-top: 132px;
-        background-color: #5474fd;        
+        background-color: #5474fd;
+
+        @media (max-width: 991px) {
+            margin-top: 100px;
+        } 
+        @media (max-width: 767px) {
+            margin-top: 50px;
+        }       
     } 
     &__footerLogo {
         color: white;
@@ -117,12 +173,26 @@
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
-        margin-left: -3px;    
+        margin-left: -3px; 
+        
+        @media (max-width: 991px) {
+            margin-top: 20px;
+        }
+        @media (max-width: 575px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
     }
-    &__menu {
-        width: 100%; //delete
-        height: 80px; //delete
+    &__menu {              
         padding-left: 14px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+
+        @media (max-width: 991px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
     &__link {
         color: white;
@@ -143,6 +213,136 @@
         color: #060629;
         font-weight: 700;
     }
+    &__burger {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 35px;
+    }
+}
+
+.menu__toggle {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+    top: 28px;
+    right: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+
+    & input  {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: -11px;
+    right: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  & span  {
+    display: flex;
+    width: 41px;
+    height: 3px;
+    margin-bottom: 8px;
+    position: relative;    
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  & span:first-child  {
+    transform-origin: 0% 0%;
+  }
+  
+  & span:nth-last-child(2)  {
+    transform-origin: 0% 100%;
+  }
+  
+  & input:checked ~ span  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #36383F;
+  }
+
+  & input:checked ~ span:nth-last-child(3)  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  & input:checked ~ span:nth-last-child(2)  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  & input:checked ~ ul
+    {
+        opacity: .8;
+    //   transform: none;
+    }
+  
+}
+
+.menu__link {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px #85888C;
+    top: 38px;    
+    opacity: 0;
+    background-color: #F5F6FA;
+    transition: all 0.5s linear;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        height: 220px;
+        top: 38px;           
+        padding-top: 5px;
+        padding-bottom: 0;
+        }
+
+    & li {
+        padding: 15px;
+
+        @media (max-width: 768px) {
+            padding: 10px;
+            }
+    }   
+}
+.menu__item {
+    & a {
+        color: #262626;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: #ff6033;
+        cursor: pointer;
+    }
+    &:active {
+        opacity: 1;
+        background-color: brown;        
+    }
+
+    &:active a {
+        opacity: 1;
+        color: white;        
+    }
+    
+    
 }
     
     
