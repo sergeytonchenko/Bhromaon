@@ -82,14 +82,14 @@
             margin-top: 20px;
         }
     }
-    &__btn:hover .search{
+    &__btn:hover input{
         background-color: #2484ad;
         border: 2px solid #0c2e26;
     }
-    &__btn:hover .search__magnifier{
+    &__btn:hover svg{
         fill: #0c2e26;
     }
-    &__btn:active .search{
+    &__btn:active input{
         filter: invert(1);
     }
     &__btn input[value="Search"] {

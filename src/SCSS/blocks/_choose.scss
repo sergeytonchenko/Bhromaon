@@ -118,7 +118,9 @@
         transform: rotate(360deg);
     }    
     &__btn:active &__input {
-        filter: invert(1);
+        color: black;
+        background-color: #dfa317;
+        
     }    
     &__input {
         border: 0;
