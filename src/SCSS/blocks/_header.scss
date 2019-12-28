@@ -86,14 +86,14 @@
         background-color: #2484ad;
         border: 2px solid #0c2e26;
     }
-    &__btn:hover svg{
+    &__btn:hover path{
         fill: #0c2e26;
     }
     &__btn:active input{
         filter: invert(1);
     }
     &__btn input[value="Search"] {
-        padding: 22px 55px 17px 30px;
+        padding: 20px 55px 19.6px 30px;
 
         @media (max-width: 767px) {
             padding: 23px 93px 20px 70px;
