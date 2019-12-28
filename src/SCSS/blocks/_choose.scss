@@ -118,8 +118,7 @@
         transform: rotate(360deg);
     }    
     &__btn:active &__input {
-        color: black;
-        background-color: #dfa317;
+        filter: invert(1);
         
     }    
     &__input {
