@@ -32,18 +32,11 @@
             text-align: center;
         }
     }
-    &__search {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    &__search {        
         margin-top: 24px;
         width: 650px;// delete
 
-        @media (max-width: 767px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        @media (max-width: 767px) {            
             width: 0; 
         }
         
