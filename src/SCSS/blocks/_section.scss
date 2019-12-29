@@ -68,6 +68,8 @@
         line-height: 26px;
         letter-spacing: -0.3px;
         margin-bottom: 42px;
+        box-sizing: border-box;
+        max-width: 100%;
 
         @media (max-width: 991px) {
             font-size: 20px;
