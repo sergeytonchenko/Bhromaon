@@ -1,13 +1,29 @@
 .section {
     &__bg1 {
-        background-image: url(../img/Section1_bg.png);        
+        background-image: url(../../../img/section1@x1.jpg);        
         background-position: top;
         background-size: cover;
+
+        @media screen and (min-resolution: 2dppx) {                       
+            background-image: url(../../../img/section1@x2.jpg);
+        }
+        
+        @media screen and (min-resolution: 3dppx) {            
+            background-image: url(../../../img/section1@x3.jpg);
+        }
     }    
     &__bg2 {
-        background-image: url(../img/Section2_bg.png);        
+        background-image: url(../../../img/section2@x1.jpg);        
         background-position: top;
         background-size: cover;
+
+        @media screen and (min-resolution: 2dppx) {                       
+            background-image: url(../../../img/section2@x2.jpg);
+        }
+        
+        @media screen and (min-resolution: 3dppx) {            
+            background-image: url(../../../img/section2@x3.jpg);
+        }
     }
     &__block {                        
         opacity: 0.9;
